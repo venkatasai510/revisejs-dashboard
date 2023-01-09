@@ -1,0 +1,39 @@
+.popUp{
+    position: fixed;
+    padding: 15% 0;
+    top: 0;
+    width: 100%;
+    background: #000000b8;
+    &Content{
+        max-width: 500px;
+        padding: 32px;
+        border-radius: 16px;
+        margin: auto;
+        background: #080808a3;
+        border: 1px solid #ffffffb5;
+        h1{
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 150%;
+            padding-bottom: 32px;
+            color: #ffffff;
+        }
+    }
+    &Btns{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        p{
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            background: grey;
+            color: #ffffff;
+            cursor: pointer;
+            &.danger{
+                background: red;
+            }
+        }
+    }
+}

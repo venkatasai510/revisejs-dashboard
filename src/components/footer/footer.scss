@@ -1,0 +1,57 @@
+@import "../../styles/common.scss";
+
+footer {
+  text-align: center;
+  background: black;
+  padding: 48px 0 76px 0;
+  border-top: 1px solid $color-yellow;
+
+  p {
+    max-width: 382px;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 32.85px;
+    margin-bottom: 60px;
+    color: $color-grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px 45px;
+    margin-bottom: 33px;
+
+    li {
+      a {
+        color: $color-grey;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+//responsive design
+
+@media (max-width: 500px) {
+  footer {
+    ul {
+      flex-direction: column;
+
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+}

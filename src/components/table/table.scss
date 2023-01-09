@@ -1,0 +1,105 @@
+@import "../../styles/common.scss";
+
+table {
+  overflow-x: auto;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  thead {
+    tr {
+      th {
+        color: $color-grey;
+        border-bottom: 1px solid $color-grey;
+        border-bottom: 1px solid #d9d9d9;
+        white-space: nowrap;
+        text-align: left;
+        padding: 10px 10px 17px 10px;
+      }
+    }
+
+    th {
+      &:first-child {
+        padding-left: 30px;
+      }
+    }
+  }
+
+  tr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    &:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    &:hover {
+      background: rgba(224, 240, 51, 0.1);
+      .iconBtn {
+        a {
+          opacity: 1;
+        }
+      }
+    }
+    .iconBtn {
+      a {
+        opacity: 0;
+      }
+    }
+  }
+
+  td {
+    color: $color-white;
+    padding: 30px 10px;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  tbody {
+    td {
+      &:first-child {
+        padding-left: 30px;
+      }
+    }
+
+    .iconBtn {
+      &:hover {
+        // display: block;
+      }
+      img {
+        padding-right: 5px;
+      }
+      a {
+        &:nth-of-type(1) {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+
+          color: $color-white;
+          letter-spacing: 0.2em;
+          padding: 5px 9px;
+          border: 1px solid $color-white;
+          border-radius: 130px;
+          cursor: pointer;
+        }
+
+        &:nth-of-type(2) {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+
+          color: red;
+          letter-spacing: 0.2em;
+          padding: 5px 9px;
+          border: 1px solid red;
+          border-radius: 130px;
+          margin-left: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
