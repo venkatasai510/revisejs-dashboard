@@ -34,7 +34,6 @@ const Modal = () => {
     name: editNftData.name,
     tokenId: JSON.stringify(Math.floor(Math.random() * 10000)),
     description: editNftData.description,
-    collection: selectCollection,
   };
 
   const handleChangeValue = (e) => {
@@ -79,10 +78,11 @@ const Modal = () => {
       setValidation(true);
       return;
     }
-    await postNft(tokenData, properties);
+    await postNft(tokenData, properties, selectCollection);
     setTimeout(() => {
       setModal(false);
     }, 500);
+    setShowImage(false);
   };
 
   const header = {
@@ -256,7 +256,7 @@ const Modal = () => {
                             {collection.length &&
                               collection.map((name, i) => {
                                 return (
-                                  <option value={name.collectionName} key={i}>
+                                  <option value={name.id} key={i}>
                                     {name.collectionName}
                                   </option>
                                 );

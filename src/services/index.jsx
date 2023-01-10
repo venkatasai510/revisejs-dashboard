@@ -13,8 +13,8 @@ export const UploadImage = async (body) => {
     return resp;
 }
 
-export const postNft = async (tokenData, properties) => {
-    const res = await revise.addNFT(tokenData, properties);
+export const postNft = async (tokenData, properties, selectCollection) => {
+    const res = await revise.addNFT(tokenData, properties, selectCollection);
     return res;
 }
 
