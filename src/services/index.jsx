@@ -38,7 +38,6 @@ export const DeleteThisNft = async (v) => {
 
 // Collections
 export const AddCollectionData = async (collectionData) => {
-  // console.log("🚀 ~ file: index.jsx:41 ~ AddCollectionData ~ collectionData", collectionData)
   const resp = await axios.post(`${baseUrl}/collections`, collectionData ,header)
 
   return resp;

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { MyContext } from "../../context";
 import { AddCollectionData } from "../../services";
 import cross from "../../assets/images/cross.svg";
+import Info from "../../assets/images/info.svg";
 import "./modal.scss";
 
 const AddCollection = () => {
@@ -55,7 +56,7 @@ const AddCollection = () => {
                         {validation && !collectionData?.collectionName?.length ? <span>Please Enter Collection Name</span> : ""}
                       </div>
                       <div className="inputBox">
-                        <label htmlFor="name">ENTER URI</label>
+                        <label className="tooltip" htmlFor="name">ENTER URI <div><img src={Info} alt="info" /> <span className="tooltiptext">Enter a unique URI each & every time.</span></div></label>
                         <input type="text" name="collectionURI" placeholder="ENTER COLLECTION URI" onChange={handleChangeValue} value={collectionData.collectionURI}/>
                         {validation && !collectionData?.collectionURI?.length ? <span>Please Enter Collection URI</span> : ""}
                       </div>

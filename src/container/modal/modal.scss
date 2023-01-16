@@ -148,6 +148,31 @@
         padding-top: 11px;
       }
     }
+    .tooltip{
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      div{
+        cursor: pointer;
+        &:hover{
+          .tooltiptext{
+            display: block;
+          }
+        }
+      }
+      .tooltiptext{
+        position: absolute;
+        top: -26px;
+        background: #eae6e6;
+        width: fit-content;
+        padding: 4px;
+        font-size: 10px;
+        border-radius: 4px;
+        color: black;
+        display: none;
+      }
+    }
     input {
       padding: 18px 15px;
       border: 1px solid #ffffff;

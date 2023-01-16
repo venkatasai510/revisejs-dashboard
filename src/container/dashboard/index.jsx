@@ -9,7 +9,7 @@ import Footer from "../../components/footer";
 import AddCollection from "../modal/addCollection";
 
 const Dashboard = () => {
-  const { modal, setModal, collectionModal, setCollectionModal, collectionTable, setCollectionTable,setEditData, setEditNftData } = useContext(MyContext);
+  const { modal, setModal, collectionModal, setCollectionModal, collectionTable, setShowImage, setCollectionTable,setEditData, setEditNftData } = useContext(MyContext);
 
   return (
 
@@ -37,7 +37,8 @@ const Dashboard = () => {
                     name : "",
                     tokenId : "",
                 })
-                  setEditData(false)
+                  setEditData(false);
+                  setShowImage(false)
                 }}
               >
                 ADD NFT 
